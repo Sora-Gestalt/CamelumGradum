@@ -1,0 +1,46 @@
+
+.header {
+    font-family: "Josefin Sans", sans-serif; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.Logo {
+    font-size: 32px;
+    color: whitesmoke;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 24px;
+    color: whitesmoke;
+    font-weight: 100;
+    text-decoration: none;
+    margin-right: 40px;
+}
+
+.navbar a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    top: 100%;
+    right: 0;
+    background-color: whitesmoke;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}

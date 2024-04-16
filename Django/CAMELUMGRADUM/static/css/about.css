@@ -1,0 +1,262 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: "Dancing Script", cursive;
+    background-color: rgb(255, 254, 240); /* Set the background color */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+}
+
+/* Scrollbar Styles */
+body::-webkit-scrollbar {
+    width: 6px; /* Set the width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background-color: rgb(175, 175, 175); /* Set the background color of the scrollbar track */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0, 0.5); /* Set the color of the scrollbar thumb with some transparency */
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(0,0,0,0.5); /* Set the semi-transparent background color for the header */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fix the header at the top of the viewport */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure the header appears above other content */
+}
+
+.logo img {
+    height: 50px; /* Set the height of the logo */
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Set the color of the navigation links */
+    font-size: 18px;
+    font-weight: 100;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Add underline effect on hover */
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: rgba(29, 29, 29, 0.7); /* Set the semi-transparent background color for the footer */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fix the footer at the bottom of the viewport */
+    width: 100%;
+    bottom: 0;
+    z-index: 1000; /* Ensure the footer appears above other content */
+}
+
+.footer-menu ul {
+    list-style-type: none;
+}
+
+.footer-menu ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-menu ul li a {
+    text-decoration: none;
+    color: white; /* Set the color of the footer links */
+    font-size: 16px;
+}
+
+.footer-menu ul li a:hover {
+    text-decoration: underline; /* Add underline effect on hover */
+}
+
+footer p {
+    color: white; /* Set the color of the footer text */
+    font-size: 14px;
+}
+
+/* Add fade-in animation for the entire page */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* Transition to opacity 1 */
+    }
+}
+
+body {
+    animation: fadeIn 1s forwards; /* Apply fade-in animation to the body */
+}
+
+header, .main-content, footer {
+    opacity: 0; /* Initially hide header, main content, and footer */
+}
+
+/* Apply fade-in animation to header, main content, and footer */
+header, .main-content, footer {
+    animation: fadeIn 1s forwards; /* Apply fade-in animation */
+}
+/* Main Content Styles */
+.main-content {
+    margin-top: 120px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-content p {
+    position: relative; /* Set position to relative to allow absolute positioning of pseudo-elements */
+}
+
+.main-content p::before,
+.main-content p::after {
+    content: ''; /* Empty content */
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px; /* Set the height of the line */
+    background-color: black; /* Set the color of the line */
+    z-index: -1; /* Push the lines behind the text */
+}
+
+.main-content p::before {
+    top: -10px; /* Position the line above the paragraph */
+}
+
+.main-content p::after {
+    bottom: -10px; /* Position the line below the paragraph */
+}
+
+/* About Page Styles */
+
+.about-page {
+    background-color: #f8f9fa; /* Set the background color */
+    padding: 50px; /* Add padding for spacing */
+}
+
+.about-heading {
+    font-size: 36px; /* Set the font size for the heading */
+    color: #333; /* Set the text color */
+    margin-bottom: 30px; /* Add margin for spacing */
+}
+
+.about-description {
+    font-size: 18px; /* Set the font size for the description */
+    color: #555; /* Set the text color */
+    line-height: 1.6; /* Set the line height for better readability */
+    margin-bottom: 20px; /* Add margin for spacing */
+}
+
+.about-image {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add border radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+}
+
+/* Adjust other styles as needed */
+/* Main Content Styles */
+.main-content {
+    margin-top: 120px;
+    text-align: center;
+    position: relative; /* Change position to relative */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.main-content h2 {
+    font-weight: 100; /* Set the font weight */
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 40px; /* Adjust the font size */
+    text-decoration: underline;
+    text-decoration-color: #fff; /* Match the color with the navigation and footer */
+    text-decoration-thickness: 5px; /* Adjust the thickness of the underline */
+    padding: 10px; /* Add padding for spacing */
+    border-bottom: 2px solid #fff; /* Add a border at the bottom */
+    margin-bottom: 20px; /* Add margin at the bottom */
+    color: #fff; /* Match the text color with the navigation and footer */
+}
+
+.main-content img {
+    display: block; /* Make the image a block element */
+    margin: 0 auto 20px; /* Center the image and add margin at the bottom */
+}
+
+.main-content::before,
+.main-content::after {
+    content: ''; /* Empty content */
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50%; /* Set the height of the background */
+    background-color: rgba(0, 0, 0, 0.5); /* Match the background color with the navigation and footer */
+    z-index: -1; /* Push the background behind the content */
+}
+
+.main-content::before {
+    top: 0; /* Position the background above the content */
+}
+
+.main-content::after {
+    bottom: 0; /* Position the background below the content */
+}
+
+/* About Page Styles */
+
+.about-page {
+    background-color: #f8f9fa; /* Set the background color */
+    padding: 50px; /* Add padding for spacing */
+}
+
+.about-heading {
+    font-size: 36px; /* Set the font size for the heading */
+    color: #333; /* Set the text color */
+    margin-bottom: 30px; /* Add margin for spacing */
+}
+
+.about-description {
+    font-size: 18px; /* Set the font size for the description */
+    color: #555; /* Set the text color */
+    line-height: 1.6; /* Set the line height for better readability */
+    margin-bottom: 20px; /* Add margin for spacing */
+}
+
+.about-image {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add border radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+}
+

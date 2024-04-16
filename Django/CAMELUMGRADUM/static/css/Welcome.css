@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Dancing Script", cursive;
+    background-image: url(Images-CSS/4.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh; /* Ensure the body fills the viewport height */
+    display: flex; /* Add this to use flexbox */
+    justify-content: center; /* Center the .Location div horizontally */
+}
+
+body::-webkit-scrollbar{
+    width: 6px;
+}
+body::-webkit-scrollbar-track{
+    background-color: rgb(175, 175, 175);
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(0, 0, 0);
+}
+
+
+
+.header {
+    font-family: "Josefin Sans", sans-serif; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.Logo {
+    font-size: 32px;
+    color: whitesmoke;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 24px;
+    color: whitesmoke;
+    font-weight: 100;
+    text-decoration: none;
+    margin-right: 40px;
+}
+
+.navbar a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    top: 100%;
+    right: 0;
+    background-color: whitesmoke;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+
+.Location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Location > * {
+    margin-top: 10px; /* Add margin between flex items */
+}
+
+.Location > *:first-child {
+    margin-top: 0; /* Remove margin from the first flex item */
+}
+
+
+.Location h1,h3,h4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    font-size: 50px;
+}
+
+.Location h3,h4{
+    font-family: "Josefin Sans", sans-serif; 
+    font-weight: 100;
+}
+
+#Reservation {
+    font-size: 40px ;
+    border: 1px solid #bbb; /* Border with 2px width and solid style */
+    border-radius: 8px; /* Optional: Add border radius for rounded corners */
+    padding: 20px; /* Optional: Add padding for inner content */
+    background-color: rgba(29, 29, 29, 0.7);
+}
+
+

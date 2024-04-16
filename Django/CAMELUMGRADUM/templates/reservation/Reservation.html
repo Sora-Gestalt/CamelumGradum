@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CAMELUMGRADUM</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '../static/css/Reservation.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
+    <link rel="icon"  href="{% static '../static/Images/6.png' %}">
+    <!-- Add any other meta tags or external stylesheets here -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static '../static/Images/6.png' %}" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:8000">Main</a></li>
+                <li><a href="http://127.0.0.1:8000/orders/">Orders</a></li>
+                <li><a href="https://maps.app.goo.gl/y23sUkcNf8fsb6Ru6">Location</a></li>
+                <li><a href="http://127.0.0.1:8000/about">About</a></li>
+                <li><a href="http://127.0.0.1:8000/Menu">Menu</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="main-content">
+    <h2 id="main-header">&mdash; Reservation &mdash;</h2>
+    <div class="main-Reservation">
+        
+        <form method="post" action="{% url 'Reservation' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="id_RName">Your Name:</label><br>
+            {{ form.RName }}<br><br>
+        
+            <label for="id_RDate">Reservation Date:</label><br>
+            {{ form.RDate }}<br><br>
+        
+            <label for="id_RTime">Reservation Time:</label><br>
+            {{ form.RTime }}<br><br>
+        
+            <label for="id_RPersons">Number of Persons:</label><br>
+            {{ form.RPersons }}<br><br>
+        
+            <button type="submit" name="submit">Submit</button>
+        </form>
+        
+        
+        
+        
+        <img src="{% static '../static/Images/3.jpg' %}" width="700px" height="500px">
+    </div>
+    </section>
+
+    <footer>
+        <div class="footer-menu">
+            <ul>
+                <li><a href="#"><img src="{% static '../static/Images/x.png' %}" width="30px" height="30px" alt="X.com"></a></li>
+                <li><a href="#"><img src="{% static '../static/Images/instagram.png' %}" width="30px" height="30px" alt="instagram.com"></a></li>
+                <li><a href="#"><img src="{% static '../static/Images/snapchat.png' %}" width="30px" height="30px" alt="snapchat.com"></a></li>
+            </ul>
+        </div>
+        <p>2024 CamelumGradum Cafe | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

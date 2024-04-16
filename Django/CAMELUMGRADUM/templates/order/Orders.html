@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '../static/css/Orders.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
+    <link rel="icon"  href="{% static '../static/Images/6.png' %}">
+    <title>CAMELUM Orders</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static '../static/Images/6.png' %}" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:8000/">Main</a></li>
+                <li><a href="https://maps.app.goo.gl/y23sUkcNf8fsb6Ru6">Location</a></li>
+                <li><a href="http://127.0.0.1:8000/reservation/">Reservation</a></li>
+                <li><a href="http://127.0.0.1:8000/Menu">Menu</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="http://127.0.0.1:8000/about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="menu">
+            <div class="heading">
+                <h1>CamelumGradum</h1>
+                <h3>&mdash; THE COFFEE WE USE AT CAMELUMGRADUM &mdash; </h3>
+            </div>
+            <div class="coffee-bags-container">
+                {% for bag in coffee_bags %}
+                <div class="food-items">
+                    <img src="{{ bag.CBP.url }}">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5>{{ bag.CName }}</h5>
+                            <h5 class="price">{{ bag.price }}-SAR | 250g</h5>
+                            <h5 class="Date">{{ bag.Cdate }}</h5>
+                        </div>
+                        <p>{{ bag.CBD }}</p>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+    </section>
+    <footer>
+        <div class="footer-menu">
+            <ul>
+                <li><a href="https://twitter.com/Nawaf73696845"><img src="{% static '../static/Images/x.png' %}" width="30px" height="30px" alt="X.com"></a></li>
+                <li><a href="https://www.instagram.com/sora_.9/"><img src="{% static '../static/Images/instagram.png' %}" width="30px" height="30px" alt="instagram.com"></a></li>
+                <li><a href="https://www.snapchat.com/?locale=ar-AR"><img src="{% static '../static/Images/snapchat.png' %}" width="30px" height="30px" alt="snapchat.com"></a></li>
+            </ul>
+        </div>
+        <p>2024 CamelumGradum Cafe | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

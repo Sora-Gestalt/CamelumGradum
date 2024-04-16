@@ -1,0 +1,237 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-weight: 100;
+    font-family: "Josefin Sans", sans-serif;
+    color: whitesmoke;
+    background-color: #070F2B; /* Set the background color */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+}
+
+/* Scrollbar Styles */
+body::-webkit-scrollbar {
+    width: 6px; /* Set the width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background-color: rgb(175, 175, 175); /* Set the background color of the scrollbar track */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0, 0.5); /* Set the color of the scrollbar thumb with some transparency */
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(0,0,0,0.2); /* Set the semi-transparent background color for the header */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fix the header at the top of the viewport */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure the header appears above other content */
+}
+
+.logo img {
+    height: 50px; /* Set the height of the logo */
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Set the color of the navigation links */
+    font-size: 18px;
+    font-weight: 100;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Add underline effect on hover */
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: rgba(0,0,0,0.5); /* Set the semi-transparent background color for the footer */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fix the footer at the bottom of the viewport */
+    width: 100%;
+    bottom: 0;
+    z-index: 1000; /* Ensure the footer appears above other content */
+}
+
+.footer-menu ul {
+    list-style-type: none;
+}
+
+.footer-menu ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-menu ul li a {
+    text-decoration: none;
+    color: white; /* Set the color of the footer links */
+    font-size: 16px;
+}
+
+.footer-menu ul li a:hover {
+    text-decoration: underline; /* Add underline effect on hover */
+}
+
+footer p {
+    color: white; /* Set the color of the footer text */
+    font-size: 14px;
+}
+
+/* Add fade-in animation for the entire page */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* Transition to opacity 1 */
+    }
+}
+
+body {
+    animation: fadeIn 3s forwards; /* Apply fade-in animation to the body */
+}
+
+header, .main-content, footer {
+    opacity: 0; /* Initially hide header, main content, and footer */
+}
+
+/* Apply fade-in animation to header, main content, and footer */
+header, .main-content, footer {
+    animation: fadeIn 3s forwards; /* Apply fade-in animation */
+}
+/* Main Content Styles */
+
+.menu{
+    padding: 0 10px 30px 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+}
+
+.heading {
+    background-color:#1B1A55;
+    color: whitesmoke;
+    margin-bottom: 30px;
+    padding: 30px 0;
+    grid-column: 1/-1;
+    text-align: center;
+    font-weight: 100;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.heading>h1 {
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+}
+
+.heading>h3 {
+    font-weight: bolder;
+    font-size: 22px;
+    letter-spacing: 5px;
+}
+
+.food-items {
+    display: grid;
+    position: relative;
+    grid-template-rows: auto 1fr;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    margin: 40px;
+}
+
+.food-items img{
+    position: relative;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+h1{
+    grid-column: 1/-1;
+    text-align: center;
+}
+
+.details {
+    padding: 20px 10px;
+    display: grid;
+    grid-template-rows: auto 1fr 50px;
+    grid-row-gap: 15px;
+}
+
+.details-sub {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.details-sub>h5 {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.price {
+    text-align: right;
+}
+.Date {
+    margin-top: 10px;
+    text-align: left;
+}
+.details>p {
+    color: aliceblue;
+    font-size: 15px;
+    line-height: 28px;
+    align-self: stretch;
+}
+
+.details>button {
+    background-color: #1B1A55;
+    color: aliceblue;
+    border: none;
+    border-radius: 5px;
+    font-weight: 100;
+    font-family: "Josefin Sans", sans-serif;
+    width: 180px;
+    background: linear-gradient(90deg,#03a9f4,#1B1A55,#9290C3,#535C91,#070F2B,#03a9f4);
+    background-size: 400%;
+}
+
+.details>button:hover {
+    animation: animate 8s linear infinite;
+}
+@keyframes animate {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}

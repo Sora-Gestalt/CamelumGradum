@@ -1,0 +1,162 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: "Dancing Script", cursive;
+    background-color: #070F2B; /* Set the background color */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+}
+
+/* Scrollbar Styles */
+body::-webkit-scrollbar {
+    width: 6px; /* Set the width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background-color: rgb(175, 175, 175); /* Set the background color of the scrollbar track */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0, 0.5); /* Set the color of the scrollbar thumb with some transparency */
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(0,0,0,0.5); /* Set the semi-transparent background color for the header */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fix the header at the top of the viewport */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure the header appears above other content */
+}
+
+.logo img {
+    height: 50px; /* Set the height of the logo */
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Set the color of the navigation links */
+    font-size: 18px;
+    font-weight: 100;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Add underline effect on hover */
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: rgba(0,0,0,0.5); /* Set the semi-transparent background color for the footer */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fix the footer at the bottom of the viewport */
+    width: 100%;
+    bottom: 0;
+    z-index: 1000; /* Ensure the footer appears above other content */
+}
+
+.footer-menu ul {
+    list-style-type: none;
+}
+
+.footer-menu ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-menu ul li a {
+    text-decoration: none;
+    color: white; /* Set the color of the footer links */
+    font-size: 16px;
+}
+
+.footer-menu ul li a:hover {
+    text-decoration: underline; /* Add underline effect on hover */
+}
+
+footer p {
+    color: white; /* Set the color of the footer text */
+    font-size: 14px;
+}
+
+/* Add fade-in animation for the entire page */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* Transition to opacity 1 */
+    }
+}
+
+body {
+    animation: fadeIn 3s forwards; /* Apply fade-in animation to the body */
+}
+
+header, .main-content, footer {
+    opacity: 0; /* Initially hide header, main content, and footer */
+}
+
+/* Apply fade-in animation to header, main content, and footer */
+header, .main-content, footer {
+    animation: fadeIn 3s forwards; /* Apply fade-in animation */
+}
+/* Main Content Styles */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Set the color of the navigation links */
+    font-size: 18px;
+    font-weight: 100;
+    font-family: "Josefin Sans", sans-serif;
+    margin-top: 250px;
+}
+
+#main-header {
+    margin: 15px;
+    border-bottom: whitesmoke 1px solid;
+    border-radius: 5px;
+    font-size: 50px;
+    letter-spacing: 5px;
+    font-weight: 100;
+}
+
+.main-Reservation {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 20px;
+    border: #9290C3 solid 10px;
+    border-radius: 5px;
+}
+
+.main-Reservation>img {
+    justify-content: start;
+}

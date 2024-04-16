@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CAMELUMGRADUM</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '../../static/css/about.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
+    <link rel="icon"  href="{% static '../../static/Images/6.png' %}">
+    <!-- Add any other meta tags or external stylesheets here -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static '../../static/Images/6.png' %}" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:8000">Main</a></li>
+                <li><a href="http://127.0.0.1:8000/orders/">Orders</a></li>
+                <li><a href="#">Location</a></li>
+                <li><a href="#">Reservation</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main-content">
+        <h2 class="about-heading">About CamelumGradum</h2>
+        <div class="about_camelum">
+            <p class="about-description">CamelumGradum, the Latin name for "camel step," was created by Eng. Nawaf Abdullah Al Taleb in 2017 in Riyadh. CamelumGradum is a specialist and professional cafe known well in France (Paris), Italy (Vatican City/Rome), Netherlands (Amsterdam), and Turkey (Istanbul).
+            <br>
+            <br>
+            Our story begins in 2016 when Eng. Nawaf was studying Software Engineering. Nawaf, a coffee enthusiast and professional barista, decided to establish the Saudi brand CamelumGradum. Our beans are sourced from specialist farms in Columbia, Costa Rica, Ethiopia, Yemen, Ghana, Saudi Arabia, and France.
+            <br>
+            <br>
+            Have a great journey at our Cafe!</p> 
+            <img src="{% static '../../static/Images/1.jpg' %}" class="about-image" alt="Cafe Image">
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-menu">
+            <ul>
+                <li><a href="#"><img src="{% static '../../static/Images/x.png' %}" width="30px" height="30px" alt="X.com"></a></li>
+                <li><a href="#"><img src="{% static '../../static/Images/instagram.png' %}" width="30px" height="30px" alt="instagram.com"></a></li>
+                <li><a href="#"><img src="{% static '../../static/Images/snapchat.png' %}" width="30px" height="30px" alt="snapchat.com"></a></li>
+            </ul>
+        </div>
+        <p>2024 CamelumGradum Cafe | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
